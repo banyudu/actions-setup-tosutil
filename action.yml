@@ -1,6 +1,6 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Setup tosutil'
+description: 'Setup tosutil for your GitHub Actions'
+author: 'Yudu Ban'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -9,15 +9,20 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  endpoint:
+    description:
+      'Endpoint of your service, for example: tos-cn-shanghai.volces.com'
+  region:
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+    description: 'Region name of your service, for example: cn-shanghai'
+  access-key-id:
+    required: true
+    description: 'Access key ID of your account'
+  access-key-secret:
+    required: true
+    description: 'Secret of the access key'
+  token:
+    description: 'Token'
 
 runs:
   using: node20
